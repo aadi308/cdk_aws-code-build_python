@@ -34,23 +34,23 @@ class CdkEksCodebuildPythonStack(Stack):
    subnets=["subnet-0dd2f4e1d6a9254bd", "subnet-0cc9708ec93bb0156"],
   
 )
-        repo = codecommit.Repository(
-            self, "WorkshopRepo", repository_name="aadirepo"
-            branch_name="master"
-        )
+        # repo = codecommit.Repository(
+        #     self, "WorkshopRepo", repository_name="aadirepo"
+           
+        # )
 
-        pipeline = pipelines.CodePipeline(
-            self,
-            "Pipeline",
-            synth= pipelines.ShellStep(
-                "Synth",
-                input=pipelines.CodePipelineSource.code_commit(repo, "master"),
-                commands=[
-                    "pip install pytest",  # Installs the cdk cli on Codebuild
-                    "pytest",  # Instructs Codebuild to install required packages
-                    "cdk synth",
-                ]
-            ),
-        )
+        # pipeline = pipelines.CodePipeline(
+        #     self,
+        #     "Pipeline",
+        #     synth= pipelines.ShellStep(
+        #         "Synth",
+        #         input=pipelines.CodePipelineSource.code_commit(repo, "master"),
+        #         commands=[
+        #             "pip install pytest",  # Installs the cdk cli on Codebuild
+        #             "pytest",  # Instructs Codebuild to install required packages
+        #             "cdk synth",
+        #         ]
+        #     ),
+        # )
    
 

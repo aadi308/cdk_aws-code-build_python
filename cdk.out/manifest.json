@@ -23,7 +23,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/bf8733db657ac13eacd0ace68a887486224c5f5b65e44f844eac3def375cf08d.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/295dac8e598fe1133acdc9f5f5363a967ed972a373a8fdaace787522168911b2.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -43,120 +43,6 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "MyFargateProfile"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/WorkshopRepo/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "WorkshopRepoE6F95803"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/WorkshopRepo/CdkEksCodebuildPythonStackPipeline37452AA6EventRule/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "WorkshopRepoCdkEksCodebuildPythonStackPipeline37452AA6EventRule369C2772"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/ArtifactsBucket/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineArtifactsBucketAEA9A052"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/ArtifactsBucket/Policy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineArtifactsBucketPolicyF53CCC52"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Role/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineRoleB27FAA37"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Role/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineRoleDefaultPolicy7BDC1ABB"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "Pipeline9850B417"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/CodeCommit/CodePipelineActionRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineSourceCodeCommitCodePipelineActionRole48F8DEFA"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/CodeCommit/CodePipelineActionRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineSourceCodeCommitCodePipelineActionRoleDefaultPolicy3CEB31C0"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/EventsRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineEventsRole96280D9B"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/EventsRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineEventsRoleDefaultPolicy62809D8F"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineBuildSynthCdkBuildProjectRole231EEA2A"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Role/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineBuildSynthCdkBuildProjectRoleDefaultPolicyFB6C941C"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Build/Synth/CdkBuildProject/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/CodeBuildActionRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineCodeBuildActionRole226DB0CB"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/CodeBuildActionRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineCodeBuildActionRoleDefaultPolicy1D62A6FE"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/UpdatePipeline/SelfMutation/Role/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineUpdatePipelineSelfMutationRole57E559E8"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/UpdatePipeline/SelfMutation/Role/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineUpdatePipelineSelfMutationRoleDefaultPolicyA225DA4E"
-          }
-        ],
-        "/CdkEksCodebuildPythonStack/Pipeline/UpdatePipeline/SelfMutation/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "PipelineUpdatePipelineSelfMutationDAA41400"
           }
         ],
         "/CdkEksCodebuildPythonStack/CDKMetadata/Default": [
