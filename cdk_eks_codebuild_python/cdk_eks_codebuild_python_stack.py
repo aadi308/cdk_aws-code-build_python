@@ -5,7 +5,7 @@ from aws_cdk import (
     Stack,
     aws_codecommit as codecommit,
     pipelines as pipelines,
-    # aws_sqs as sqs,
+    aws_sqs as sqs,
 )
 import aws_cdk.aws_eks as eks
 
@@ -34,23 +34,29 @@ class CdkEksCodebuildPythonStack(Stack):
    subnets=["subnet-0dd2f4e1d6a9254bd", "subnet-0cc9708ec93bb0156"],
   
 )
+        repository = codecommit.Repository.from_repository_name(
+            self,
+            "RepositoryFromArn",
+            "eks-repo",
+            )
+ 
         # repo = codecommit.Repository(
         #     self, "WorkshopRepo", repository_name="aadirepo"
            
         # )
 
-        # pipeline = pipelines.CodePipeline(
-        #     self,
-        #     "Pipeline",
-        #     synth= pipelines.ShellStep(
-        #         "Synth",
-        #         input=pipelines.CodePipelineSource.code_commit(repo, "master"),
-        #         commands=[
-        #             "pip install pytest",  # Installs the cdk cli on Codebuild
-        #             "pytest",  # Instructs Codebuild to install required packages
-        #             "cdk synth",
-        #         ]
-        #     ),
-        # )
+        pipeline = pipelines.CodePipeline(
+            self,
+            "Pipeline",
+            synth= pipelines.ShellStep(
+                "Synth",
+                input=pipelines.CodePipelineSource.code_commit(repo, "master"),
+                commands=[
+                    "pip install pytest",  # Installs the cdk cli on Codebuild
+                    "pytest",  # Instructs Codebuild to install required packages
+                    "cdk synth",
+                ]
+            ),
+        )
    
 
