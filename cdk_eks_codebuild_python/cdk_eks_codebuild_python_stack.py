@@ -1,5 +1,5 @@
-from ssl import ALERT_DESCRIPTION_BAD_CERTIFICATE_STATUS_RESPONSE
-from typing_extensions import Self
+# from ssl import ALERT_DESCRIPTION_BAD_CERTIFICATE_STATUS_RESPONSE
+# from typing_extensions import Self
 from aws_cdk import (
     # Duration,
     Stack,
@@ -50,8 +50,10 @@ class CdkEksCodebuildPythonStack(Stack):
             "Pipeline",
             synth= pipelines.ShellStep(
                 "Synth",
-                input=pipelines.CodePipelineSource.code_commit(repo, "master"),
+                input=pipelines.CodePipelineSource.code_commit(repository, "master"),
                 commands=[
+                    "npm install -g aws-cdk",
+                    "python -m pip install -r requirements.txt",
                     "pip install pytest",  # Installs the cdk cli on Codebuild
                     "pytest",  # Instructs Codebuild to install required packages
                     "cdk synth",
