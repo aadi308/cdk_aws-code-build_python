@@ -1,3 +1,4 @@
+from ssl import ALERT_DESCRIPTION_BAD_CERTIFICATE_STATUS_RESPONSE
 from typing_extensions import Self
 from aws_cdk import (
     # Duration,
@@ -35,6 +36,7 @@ class CdkEksCodebuildPythonStack(Stack):
 )
         repo = codecommit.Repository(
             self, "WorkshopRepo", repository_name="aadirepo"
+            branch_name="master"
         )
 
         pipeline = pipelines.CodePipeline(
