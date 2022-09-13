@@ -24,7 +24,7 @@
          {
           "Ref": "AWS::AccountId"
          },
-         ":eks-repo"
+         ":ecs-repo_aadi"
         ]
        ]
       }
@@ -231,7 +231,7 @@
         },
         {
          "Fn::GetAtt": [
-          "PipelineSourceeksrepoCodePipelineActionRoleE78B5762",
+          "PipelineSourceecsrepoaadiCodePipelineActionRoleCD748732",
           "Arn"
          ]
         }
@@ -271,19 +271,19 @@
          "Version": "1"
         },
         "Configuration": {
-         "RepositoryName": "eks-repo",
+         "RepositoryName": "ecs-repo_aadi",
          "BranchName": "master",
          "PollForSourceChanges": false
         },
-        "Name": "eks-repo",
+        "Name": "ecs-repo_aadi",
         "OutputArtifacts": [
          {
-          "Name": "eks_repo_Source"
+          "Name": "ecs_repo_aadi_Source"
          }
         ],
         "RoleArn": {
          "Fn::GetAtt": [
-          "PipelineSourceeksrepoCodePipelineActionRoleE78B5762",
+          "PipelineSourceecsrepoaadiCodePipelineActionRoleCD748732",
           "Arn"
          ]
         },
@@ -309,7 +309,7 @@
         },
         "InputArtifacts": [
          {
-          "Name": "eks_repo_Source"
+          "Name": "ecs_repo_aadi_Source"
          }
         ],
         "Name": "Synth",
@@ -378,7 +378,7 @@
     "aws:cdk:path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Resource"
    }
   },
-  "PipelineSourceeksrepoCodePipelineActionRoleE78B5762": {
+  "PipelineSourceecsrepoaadiCodePipelineActionRoleCD748732": {
    "Type": "AWS::IAM::Role",
    "Properties": {
     "AssumeRolePolicyDocument": {
@@ -410,10 +410,10 @@
     }
    },
    "Metadata": {
-    "aws:cdk:path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/eks-repo/CodePipelineActionRole/Resource"
+    "aws:cdk:path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/ecs-repo_aadi/CodePipelineActionRole/Resource"
    }
   },
-  "PipelineSourceeksrepoCodePipelineActionRoleDefaultPolicy70C51D6B": {
+  "PipelineSourceecsrepoaadiCodePipelineActionRoleDefaultPolicy752C711F": {
    "Type": "AWS::IAM::Policy",
    "Properties": {
     "PolicyDocument": {
@@ -480,7 +480,7 @@
           {
            "Ref": "AWS::AccountId"
           },
-          ":eks-repo"
+          ":ecs-repo_aadi"
          ]
         ]
        }
@@ -488,15 +488,15 @@
      ],
      "Version": "2012-10-17"
     },
-    "PolicyName": "PipelineSourceeksrepoCodePipelineActionRoleDefaultPolicy70C51D6B",
+    "PolicyName": "PipelineSourceecsrepoaadiCodePipelineActionRoleDefaultPolicy752C711F",
     "Roles": [
      {
-      "Ref": "PipelineSourceeksrepoCodePipelineActionRoleE78B5762"
+      "Ref": "PipelineSourceecsrepoaadiCodePipelineActionRoleCD748732"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/eks-repo/CodePipelineActionRole/DefaultPolicy/Resource"
+    "aws:cdk:path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/ecs-repo_aadi/CodePipelineActionRole/DefaultPolicy/Resource"
    }
   },
   "PipelineEventsRole96280D9B": {

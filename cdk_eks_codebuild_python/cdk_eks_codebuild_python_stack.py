@@ -37,7 +37,7 @@ class CdkEksCodebuildPythonStack(Stack):
         repository = codecommit.Repository.from_repository_name(
             self,
             "RepositoryFromArn",
-            "eks-repo",
+            "ecs-repo_aadi",
             )
  
         # repo = codecommit.Repository(

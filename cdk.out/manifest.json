@@ -23,7 +23,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/7e140bf726310b961a2701d7c9b17800fbb92f3affa759faa90647c0d9ff159f.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/65a8d560423b30d2e35a3557e081422db79e2e05c632157580c758b7d083a698.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -75,16 +75,16 @@
             "data": "Pipeline9850B417"
           }
         ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/eks-repo/CodePipelineActionRole/Resource": [
+        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/ecs-repo_aadi/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PipelineSourceeksrepoCodePipelineActionRoleE78B5762"
+            "data": "PipelineSourceecsrepoaadiCodePipelineActionRoleCD748732"
           }
         ],
-        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/eks-repo/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/ecs-repo_aadi/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "PipelineSourceeksrepoCodePipelineActionRoleDefaultPolicy70C51D6B"
+            "data": "PipelineSourceecsrepoaadiCodePipelineActionRoleDefaultPolicy752C711F"
           }
         ],
         "/CdkEksCodebuildPythonStack/Pipeline/Pipeline/EventsRole/Resource": [

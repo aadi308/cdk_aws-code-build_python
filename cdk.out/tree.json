@@ -51,7 +51,7 @@
                                   {
                                     "Ref": "AWS::AccountId"
                                   },
-                                  ":eks-repo"
+                                  ":ecs-repo_aadi"
                                 ]
                               ]
                             }
@@ -324,7 +324,7 @@
                                         },
                                         {
                                           "Fn::GetAtt": [
-                                            "PipelineSourceeksrepoCodePipelineActionRoleE78B5762",
+                                            "PipelineSourceecsrepoaadiCodePipelineActionRoleCD748732",
                                             "Arn"
                                           ]
                                         }
@@ -375,10 +375,10 @@
                             "name": "Source",
                             "actions": [
                               {
-                                "name": "eks-repo",
+                                "name": "ecs-repo_aadi",
                                 "outputArtifacts": [
                                   {
-                                    "name": "eks_repo_Source"
+                                    "name": "ecs_repo_aadi_Source"
                                   }
                                 ],
                                 "actionTypeId": {
@@ -388,14 +388,14 @@
                                   "provider": "CodeCommit"
                                 },
                                 "configuration": {
-                                  "RepositoryName": "eks-repo",
+                                  "RepositoryName": "ecs-repo_aadi",
                                   "BranchName": "master",
                                   "PollForSourceChanges": false
                                 },
                                 "runOrder": 1,
                                 "roleArn": {
                                   "Fn::GetAtt": [
-                                    "PipelineSourceeksrepoCodePipelineActionRoleE78B5762",
+                                    "PipelineSourceecsrepoaadiCodePipelineActionRoleCD748732",
                                     "Arn"
                                   ]
                                 }
@@ -409,7 +409,7 @@
                                 "name": "Synth",
                                 "inputArtifacts": [
                                   {
-                                    "name": "eks_repo_Source"
+                                    "name": "ecs_repo_aadi_Source"
                                   }
                                 ],
                                 "outputArtifacts": [
@@ -490,17 +490,17 @@
                     "id": "Source",
                     "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source",
                     "children": {
-                      "eks-repo": {
-                        "id": "eks-repo",
-                        "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/eks-repo",
+                      "ecs-repo_aadi": {
+                        "id": "ecs-repo_aadi",
+                        "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/ecs-repo_aadi",
                         "children": {
                           "CodePipelineActionRole": {
                             "id": "CodePipelineActionRole",
-                            "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/eks-repo/CodePipelineActionRole",
+                            "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/ecs-repo_aadi/CodePipelineActionRole",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/eks-repo/CodePipelineActionRole/Resource",
+                                "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/ecs-repo_aadi/CodePipelineActionRole/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                                   "aws:cdk:cloudformation:props": {
@@ -540,11 +540,11 @@
                               },
                               "DefaultPolicy": {
                                 "id": "DefaultPolicy",
-                                "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/eks-repo/CodePipelineActionRole/DefaultPolicy",
+                                "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/ecs-repo_aadi/CodePipelineActionRole/DefaultPolicy",
                                 "children": {
                                   "Resource": {
                                     "id": "Resource",
-                                    "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/eks-repo/CodePipelineActionRole/DefaultPolicy/Resource",
+                                    "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/Source/ecs-repo_aadi/CodePipelineActionRole/DefaultPolicy/Resource",
                                     "attributes": {
                                       "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                       "aws:cdk:cloudformation:props": {
@@ -612,7 +612,7 @@
                                                     {
                                                       "Ref": "AWS::AccountId"
                                                     },
-                                                    ":eks-repo"
+                                                    ":ecs-repo_aadi"
                                                   ]
                                                 ]
                                               }
@@ -620,10 +620,10 @@
                                           ],
                                           "Version": "2012-10-17"
                                         },
-                                        "policyName": "PipelineSourceeksrepoCodePipelineActionRoleDefaultPolicy70C51D6B",
+                                        "policyName": "PipelineSourceecsrepoaadiCodePipelineActionRoleDefaultPolicy752C711F",
                                         "roles": [
                                           {
-                                            "Ref": "PipelineSourceeksrepoCodePipelineActionRoleE78B5762"
+                                            "Ref": "PipelineSourceecsrepoaadiCodePipelineActionRoleCD748732"
                                           }
                                         ]
                                       }
