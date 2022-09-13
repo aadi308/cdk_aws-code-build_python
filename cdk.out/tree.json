@@ -9,38 +9,13 @@
         "path": "Tree",
         "constructInfo": {
           "fqn": "constructs.Construct",
-          "version": "10.1.95"
+          "version": "10.1.101"
         }
       },
       "CdkEksCodebuildPythonStack": {
         "id": "CdkEksCodebuildPythonStack",
         "path": "CdkEksCodebuildPythonStack",
         "children": {
-          "MyFargateProfile": {
-            "id": "MyFargateProfile",
-            "path": "CdkEksCodebuildPythonStack/MyFargateProfile",
-            "attributes": {
-              "aws:cdk:cloudformation:type": "AWS::EKS::FargateProfile",
-              "aws:cdk:cloudformation:props": {
-                "clusterName": "aadieks",
-                "podExecutionRoleArn": "arn:aws:iam::885300287765:role/AmazonEKSFargatePodExecutionRole-aadi",
-                "selectors": [
-                  {
-                    "namespace": "default"
-                  }
-                ],
-                "fargateProfileName": "eks_fargate",
-                "subnets": [
-                  "subnet-0dd2f4e1d6a9254bd",
-                  "subnet-0cc9708ec93bb0156"
-                ]
-              }
-            },
-            "constructInfo": {
-              "fqn": "aws-cdk-lib.aws_eks.CfnFargateProfile",
-              "version": "2.40.0"
-            }
-          },
           "RepositoryFromArn": {
             "id": "RepositoryFromArn",
             "path": "CdkEksCodebuildPythonStack/RepositoryFromArn",
@@ -673,13 +648,13 @@
                         },
                         "constructInfo": {
                           "fqn": "constructs.Construct",
-                          "version": "10.1.95"
+                          "version": "10.1.101"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "constructs.Construct",
-                      "version": "10.1.95"
+                      "version": "10.1.101"
                     }
                   },
                   "EventsRole": {
@@ -1034,13 +1009,13 @@
                         },
                         "constructInfo": {
                           "fqn": "constructs.Construct",
-                          "version": "10.1.95"
+                          "version": "10.1.101"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "constructs.Construct",
-                      "version": "10.1.95"
+                      "version": "10.1.101"
                     }
                   },
                   "UpdatePipeline": {
@@ -1052,13 +1027,13 @@
                         "path": "CdkEksCodebuildPythonStack/Pipeline/Pipeline/UpdatePipeline/SelfMutate",
                         "constructInfo": {
                           "fqn": "constructs.Construct",
-                          "version": "10.1.95"
+                          "version": "10.1.101"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "constructs.Construct",
-                      "version": "10.1.95"
+                      "version": "10.1.101"
                     }
                   }
                 },
@@ -1456,7 +1431,7 @@
                 },
                 "constructInfo": {
                   "fqn": "constructs.Construct",
-                  "version": "10.1.95"
+                  "version": "10.1.101"
                 }
               }
             },
@@ -1488,7 +1463,7 @@
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
-              "version": "10.1.95"
+              "version": "10.1.101"
             }
           }
         },

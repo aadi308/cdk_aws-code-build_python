@@ -16,24 +16,24 @@ class CdkEksCodebuildPythonStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        cfn_fargate_profile = eks.CfnFargateProfile(self, "MyFargateProfile",                                        
-        cluster_name="aadieks",
-        pod_execution_role_arn="arn:aws:iam::885300287765:role/AmazonEKSFargatePodExecutionRole-aadi",
-        selectors=[eks.CfnFargateProfile.SelectorProperty(
-        namespace="default",
+#         cfn_fargate_profile = eks.CfnFargateProfile(self, "MyFargateProfile",                                        
+#         cluster_name="aadieks",
+#         pod_execution_role_arn="arn:aws:iam::885300287765:role/AmazonEKSFargatePodExecutionRole-aadi",
+#         selectors=[eks.CfnFargateProfile.SelectorProperty(
+#         namespace="default",
 
-       # the properties below are optional
-    #    labels=[eks.CfnFargateProfile.LabelProperty(
-    #        key="key",
-    #        value="value"
-    #    )]
-   )],
+#        # the properties below are optional
+#     #    labels=[eks.CfnFargateProfile.LabelProperty(
+#     #        key="key",
+#     #        value="value"
+#     #    )]
+#    )],
 
-   # the properties below are optional
-   fargate_profile_name="eks_fargate",
-   subnets=["subnet-0dd2f4e1d6a9254bd", "subnet-0cc9708ec93bb0156"],
+#    # the properties below are optional
+#    fargate_profile_name="eks_fargate",
+#    subnets=["subnet-0dd2f4e1d6a9254bd", "subnet-0cc9708ec93bb0156"],
   
-)
+# )
         repository = codecommit.Repository.from_repository_name(
             self,
             "RepositoryFromArn",

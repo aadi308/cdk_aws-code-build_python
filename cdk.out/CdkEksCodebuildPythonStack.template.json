@@ -1,25 +1,5 @@
 {
  "Resources": {
-  "MyFargateProfile": {
-   "Type": "AWS::EKS::FargateProfile",
-   "Properties": {
-    "ClusterName": "aadieks",
-    "PodExecutionRoleArn": "arn:aws:iam::885300287765:role/AmazonEKSFargatePodExecutionRole-aadi",
-    "Selectors": [
-     {
-      "Namespace": "default"
-     }
-    ],
-    "FargateProfileName": "eks_fargate",
-    "Subnets": [
-     "subnet-0dd2f4e1d6a9254bd",
-     "subnet-0cc9708ec93bb0156"
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkEksCodebuildPythonStack/MyFargateProfile"
-   }
-  },
   "RepositoryFromArnCdkEksCodebuildPythonStackPipeline37452AA6EventRule5F55CDA3": {
    "Type": "AWS::Events::Rule",
    "Properties": {
@@ -1095,7 +1075,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/01PQQ6CMBB8i/eyohgfoIlngg8wtay6UFpCW41p+ndbAfE0s7Ozmdkt7HLIV/xlMlG3maQr+LPlomVRunhsDRxv6sSHO7dYDvpGEhk+UVkDvnJxiOuEgQldY089SlIIvpxY2s88MFOAPzjRok36xEYotSTxXuRxDox4F5P0lJRwcc6eFH11JOslN3ZtUHxjJhoCq9BoNwhkc8/4XTz97/qzRH7UqiZLWgVWvu1Dq3UBmxz2q8YQZYNTljqEasQP/lfK+koBAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/02PwQ6CMAyGn4X7qCgePMsLEHwAA1uNhbERtmnIsneXCYin/1vb5WtPcM4gS+q3SbnoUkkN+JuteccqNNqNHNncu3t8obIGfOUksuKhYgbGtcCBBpSkEHy5UuxvHJjJwV8d79DG+kpLlFoSn/by8g6M6n426dUUc5/cZqK6cSTF7i1H3SL/alYMgW3rGSjmH/8r/g6cudBKkCWtAisn+9TqkMMFjlnSGqJ0dMpSj1At+QFguLaVNAEAAA=="
    },
    "Metadata": {
     "aws:cdk:path": "CdkEksCodebuildPythonStack/CDKMetadata/Default"

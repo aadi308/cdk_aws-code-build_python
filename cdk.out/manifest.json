@@ -23,7 +23,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d97368fcd7b26c34366472e5c8a014d265c282db9201fb6e000c05ab7115fbf3.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/7e140bf726310b961a2701d7c9b17800fbb92f3affa759faa90647c0d9ff159f.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -39,12 +39,6 @@
         "CdkEksCodebuildPythonStack.assets"
       ],
       "metadata": {
-        "/CdkEksCodebuildPythonStack/MyFargateProfile": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "MyFargateProfile"
-          }
-        ],
         "/CdkEksCodebuildPythonStack/RepositoryFromArn/CdkEksCodebuildPythonStackPipeline37452AA6EventRule/Resource": [
           {
             "type": "aws:cdk:logicalId",
